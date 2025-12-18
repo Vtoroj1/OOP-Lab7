@@ -40,8 +40,8 @@ void NPC::move(double maxX, double maxY) {
     double newX = x + distance * cos(direction);
     double newY = y + distance * sin(direction);
     
-    newX = std::max(0.0, std::min(newX, maxX));
-    newY = std::max(0.0, std::min(newY, maxY));
+    newX = std::max(0.0, std::min(newX, maxX - 1));
+    newY = std::max(0.0, std::min(newY, maxY - 1));
     
     x = newX;
     y = newY;
